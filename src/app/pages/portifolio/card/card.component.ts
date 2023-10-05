@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CardComponent implements OnInit {
   constructor(private activeRoute: ActivatedRoute, private navegacao: Router) {
     this.activeRoute.params.subscribe((res) => console.log(res));
+    this.activeRoute.firstChild?.params.subscribe((res) => console.log(res));
 
     this.activeRoute.queryParams.subscribe((res) => console.log(res));
   }
