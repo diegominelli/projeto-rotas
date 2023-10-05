@@ -14,6 +14,10 @@ const routes: Routes = [
     component: CardComponent,
     pathMatch: 'prefix',
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
